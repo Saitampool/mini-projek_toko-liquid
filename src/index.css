@@ -6,9 +6,10 @@
   font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
   color-scheme: light dark;
   color: black;
-  background-color: #fff;
+  background-color: #F0F5F9;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

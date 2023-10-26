@@ -1,0 +1,170 @@
+[
+  {
+    "nama": "Fcukin Donuts Blueberry",
+    "deskripsi": "Fcukin Donuts Blueberry - ukuran : 60ml, Nicotine : 3mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Fcukin-Donuts-Blueberry.jpg",
+    "harga": 150000,
+    "kategori": "pods",
+    "id": "1"
+  },
+  {
+    "nama": "Fcukin Donuts Glazed",
+    "deskripsi": "Fcukin Donuts Glazed - ukuran : 60ml, Nicotine : 3mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Fcukin-Donuts-Glazed.jpg",
+    "harga": 150000,
+    "kategori": "pods",
+    "id": "2"
+  },
+  {
+    "nama": "Fcukin Donuts Strawberry",
+    "deskripsi": "Fcukin Donuts Strawberry - ukuran : 60ml, Nicotine : 3mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Fcukin-Donuts-Strawberry.jpg",
+    "harga": 150000,
+    "kategori": "pods",
+    "id": "3"
+  },
+  {
+    "nama": "Liquid DMOON Banana Ice Croffle V1",
+    "deskripsi": "Liquid DMOON Banana Ice Croffle V1 - ukuran : 60ml, Nicotine : 3mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-dmoon-banana-v1.jpg",
+    "harga": 140000,
+    "kategori": "pods",
+    "id": "4"
+  },
+  {
+    "nama": "Liquid DMOON Starberry Twister V2",
+    "deskripsi": "Liquid DMOON Starberry Twister V2 - ukuran : 60ml, Nicotine : 3mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/liquid-dmoon-Strawberry-Twister-v2.jpg",
+    "harga": 140000,
+    "kategori": "pods",
+    "id": "5"
+  },
+  {
+    "nama": "Liquid Munchies Slurpee Pineapple",
+    "deskripsi": "Liquid Munchies Slurpee Pineapple - ukuran : 60ml, Nicotine : 3mg/6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-Munchies-Slurpee-Pineapple.jpg",
+    "harga": 160000,
+    "kategori": "saltnic",
+    "id": "6"
+  },
+  {
+    "nama": "Liquid Munchies Soju Grape",
+    "deskripsi": "Liquid Munchies Soju Grape - ukuran : 60ml, Nicotine : 3mg/6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-Munchies-Soju-grape.jpg",
+    "harga": 160000,
+    "kategori": "saltnic",
+    "id": "7"
+  },
+  {
+    "nama": "Liquid Munchies Soju Guava",
+    "deskripsi": "Liquid Munchies Soju Guava - ukuran : 60ml, Nicotine : 3mg/6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-Munchies-Soju-Guava.jpg",
+    "harga": 160000,
+    "kategori": "saltnic",
+    "id": "8"
+  },
+  {
+    "nama": "Liquid Munchies Soju Mango",
+    "deskripsi": "Liquid Munchies Soju Mango - ukuran : 60ml, Nicotine : 3mg/6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-Munchies-Soju-Mango.jpg",
+    "harga": 160000,
+    "kategori": "saltnic",
+    "id": "9"
+  },
+  {
+    "nama": "Liquid Munchies Soju Strawberry",
+    "deskripsi": "Liquid Munchies Soju Strawberry - ukuran : 60ml, Nicotine : 3mg/6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-Munchies-Soju-Strawberry.jpg",
+    "harga": 160000,
+    "kategori": "saltnic",
+    "id": "10"
+  },
+  {
+    "nama": "Liquid Oat Drips V1 Freebase",
+    "deskripsi": "Liquid Oat Drips V1 - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2022/09/Liquid-Oat-Dripds-V1.jpg",
+    "harga": 150000,
+    "kategori": "freebase",
+    "id": "11"
+  },
+  {
+    "nama": "Liquid Oat Dripds V2 Freebase",
+    "deskripsi": "Liquid Oat Dripds V2 - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2022/09/Liquid-Oat-Dripds-V2-Freebase.jpg",
+    "harga": 150000,
+    "kategori": "freebase",
+    "id": "12"
+  },
+  {
+    "nama": "Liquid Oat Dripds V3 Freebase",
+    "deskripsi": "Liquid Oat Dripds V3 - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2022/09/Liquid-Oat-Dripds-V3-Freebase.jpg",
+    "harga": 150000,
+    "kategori": "freebase",
+    "id": "13"
+  },
+  {
+    "nama": "Liquid Oat Dripds V5 Freebase",
+    "deskripsi": "Liquid Oat Dripds V5 - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2022/09/Liquid-Oat-Dripds-V5-Freebase.jpg",
+    "harga": 150000,
+    "kategori": "freebase",
+    "id": "14"
+  },
+  {
+    "nama": "Liquid Oat Dripds V6 Freebase",
+    "deskripsi": "Liquid Oat Dripds V6 - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2022/09/Liquid-Oat-Dripds-V6-Freebase.jpg",
+    "harga": 150000,
+    "kategori": "freebase",
+    "id": "15"
+  },
+  {
+    "nama": "Liquid Oat Drips V7 Freebase",
+    "deskripsi": "Liquid Oat Drips V7 - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Oat-Drips-Oat-Raisin.jpg",
+    "harga": 150000,
+    "kategori": "freebase",
+    "id": "16"
+  },
+  {
+    "nama": "Whale Dream Golden Batch Honeydew Rollcake",
+    "deskripsi": "Whale Dream Golden Batch Honeydew Rollcake - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Whale-Dream-Golden-Batch-Honeydew-Rollcake.jpg",
+    "harga": 155000,
+    "kategori": "freebase",
+    "id": "17"
+  },
+  {
+    "nama": "Whale Dream Hokkaido Blueberry Chesee Tart",
+    "deskripsi": "Whale Dream Hokkaido Blueberry Chesee Tart - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-Whale-Dream-Hokkaido-Blueberry-Chesee-Tart.jpg",
+    "harga": 155000,
+    "kategori": "freebase",
+    "id": "18"
+  },
+  {
+    "nama": "Whale Dream Hokkaido Cheese Tart",
+    "deskripsi": "Whale Dream Hokkaido Cheese Tart - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-Whale-Dream-Hokkaido-Cheese-Tart.jpg",
+    "harga": 155000,
+    "kategori": "freebase",
+    "id": "19"
+  },
+  {
+    "nama": "Whale Dream Hokkaido Strawberry Cheese Tart",
+    "deskripsi": "Whale Dream Hokkaido Strawberry Cheese Tart - ukuran : 60ml, Nicotine : 6mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2023/08/Liquid-Whale-Dream-Hokkaido-Strawberry-Cheese-Tart.jpg",
+    "harga": 155000,
+    "kategori": "freebase",
+    "id": "20"
+  },
+  {
+    "nama": "Liquid Kawa-Kawa Angur Merah",
+    "deskripsi": "Liquid Kawa-Kawa Angur Merah - ukuran : 60ml, Nicotine : 3mg, Premium Local E-Liquid",
+    "gambar": "https://jvsgroup.id/wp-content/uploads/2022/09/Liquid-Kawa-Kawa-Anggur-Merah.jpg",
+    "harga": 140000,
+    "kategori": "pods",
+    "id": "21"
+  }
+]
