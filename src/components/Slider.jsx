@@ -7,25 +7,25 @@ function Slider() {
 
     const slides = [
         {
-            url: '../../public/hero-1.jpg',
+            url: '../../src/assets/hero-1.jpg',
         },
         {
-            url: '../../public/hero-2.jpg',
+            url: '../../src/assets/hero-2.jpg',
         },
         {
-            url: '../../public/hero-3.jpg',
+            url: '../../src/assets/hero-3.jpg',
         },
         {
-            url: '../../public/hero-4.jpg',
+            url: '../../src/assets/hero-4.jpg',
         },
         {
-            url: '../../public/hero-5.jpg',
+            url: '../../src/assets/hero-5.jpg',
         },
         {
-            url: '../../public/hero-6.jpg',
+            url: '../../src/assets/hero-6.jpg',
         },
         {
-            url: '../../public/hero-7.jpg',
+            url: '../../src/assets/hero-7.jpg',
         },
     ];
     

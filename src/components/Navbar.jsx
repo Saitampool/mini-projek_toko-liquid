@@ -5,7 +5,7 @@ import { Transition } from "@headlessui/react";
 import Cookies from "js-cookie";
 import Swal from "sweetalert2"
 import { UserCircleIcon, ShoppingBagIcon} from "@heroicons/react/24/outline"
-import logo from "../../public/logo.png"
+import logo from "../assets/logo.png"
 
 function Navbar() {
 

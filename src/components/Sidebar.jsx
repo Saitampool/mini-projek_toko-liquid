@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
 import {  useNavigate } from "react-router-dom";
-import logo from "../../public/logo.png"
+import logo from "../assets/logo.png"
 
 function Sidebar() {
     const navigate = useNavigate();

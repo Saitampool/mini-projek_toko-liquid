@@ -16,7 +16,7 @@ function About() {
         <div className='my-12'>
           <div className="block md:flex md:items-center">
             <div className="pl-0 md:pl-32">
-              <img src="../../public/about.jpg" alt="" className=""/>
+              <img src="../../src/assets/about.jpg" alt="" className=""/>
             </div>
             <div className="p-5 h-full">
               <h1 className="text-3xl font-bold pb-8 text-center md:text-left">Tentang Kami</h1>

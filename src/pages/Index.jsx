@@ -69,11 +69,11 @@ function Index() {
           loading ? (
             <div className="h-72 flex items-center justify-center font-medium text-2xl">Loading....</div>
           ) : (
-            <div className="flex flex-col md:flex-row items-center gap-x-1">
+            <div className="flex flex-col md:grid md:grid-cols-6 md:px-auto items-center">
               {
                 data &&
                 data.map((item, index) => (
-                <div className="m-5" key={index}>
+                <div className="m-5 mx-auto" key={index}>
                   <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
                       <a 
                       onClick={() => navigate(`/produk/${item?.id}`, {
@@ -119,7 +119,7 @@ function Index() {
         <div className="mt-[20px] md:mt-4">
           <div className="block md:flex md:items-center">
             <div className="pl-0 md:pl-32">
-              <img src="../../public/about.jpg" alt="" className=""/>
+              <img src="../../src/assets/about.jpg" alt="" className=""/>
             </div>
             <div className="p-5 h-full">
               <h1 className="text-3xl font-bold pb-8 text-center md:text-left">Tentang Kami</h1>
