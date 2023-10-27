@@ -50,20 +50,20 @@ function Cart() {
       {/* Navbar End */}
 
       <div>
-        <h1 className=" text-3xl font-bold mt-8 text-center">Keranjangmu</h1>
+        <h1 className=" text-3xl font-bold mt-8 text-center mb-5 md:mb-0">Keranjangmu</h1>
         <h1 className=" text-md font-medium pl-5">Total barang : {cart.items ? cart.items.length - 1 == -1 ? 0 : cart.items.length - 1 : 0}</h1>
         <h1 className=" text-md font-medium pl-5">Total harga : {formatRupiah(totalHarga)}</h1>
 
         {
           liquid.length == 0 ? (
-            <div className="h-72 flex items-center justify-center font-medium text-2xl">Keranjang belanjamu masih kosong</div>
+            <div className="h-72 flex items-center text-center justify-center font-medium text-2xl">Keranjang belanjamu masih kosong</div>
           ) : (
-            <div className='grid grid-cols-5 mt-2'>
+            <div className='flex flex-col items-center md:grid grid-cols-5 mt-2'>
           {
             liquid &&
             liquid.map((item, index) => (
               <div className="m-5" key={index}>
-              <div className="w-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-102 hover:shadow-md">
+              <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-102 hover:shadow-md">
                   <a className="cursor-pointer flex justify-center">
                       <img className="rounded-t-lg object-fill" src={item.gambar} alt="" />
                   </a>

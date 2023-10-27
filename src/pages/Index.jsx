@@ -37,14 +37,12 @@ function Index() {
   useEffect(() => {
     getLiquids()
   }, [])
-
-  console.log(data)
   
   return (
     <>
       <section className="bg-[#F0F5F9]">
         <Navbar/>
-        <div className="h-screen" id="home">
+        <div className="md:h-screen" id="home">
           <div className="text-center pt-7">
             <h1 className="text-3xl font-bold" >Mas Liquid</h1>
             <p className="mt-1 text-lg	 font-medium">Toko Vape Mas Liquid hanya menjual produk original dari brand-brand terkemuka. <br/> Produk dijamin original bergaransi.</p>
@@ -58,37 +56,11 @@ function Index() {
                   Buy now
             </a>
           </div>
-          <div className="flex items-center justify-center mt-4">
+          <div className="hidden md:flex items-center justify-center mt-4">
             <Slider/>
           </div>
         </div>
-      </section>
-      <section>
 
-        {/* TentangKami Start */}
-        <div>
-          <div className="flex items-center">
-            <div className="pl-32">
-              <img src="../../public/about.jpg" alt="" className=""/>
-            </div>
-            <div className="p-5 h-full">
-              <h1 className=" text-3xl font-bold pb-8">Tentang Kami</h1>
-              <p className="text-[#1E2022] flex items-center mb-1 font-semibold">
-                <FaceSmileIcon width={25} height={25} />
-                Layanan terbaik bagi konsumen
-              </p>
-              <p className="text-[#1E2022] flex items-center mb-1  font-semibold">
-                <ShoppingCartIcon width={25} height={25} />
-                Hanya menjual produk original
-              </p>
-              <p className="mt-4 text-[#1E2022] font-medium text-sm">
-              Toko Vape Mas Liquid hanya menjual produk original dari brand-brand terkemuka. Produk dijamin original bergaransi.
-              </p>
-            </div>
-          </div>
-        </div>
-        {/* TentangKami End */}
-        
         {/* Produk Start */}
         <div>
           <h1 className="text-center text-3xl font-bold pt-8" id="produk">Produk Kami</h1>
@@ -97,12 +69,12 @@ function Index() {
           loading ? (
             <div className="h-72 flex items-center justify-center font-medium text-2xl">Loading....</div>
           ) : (
-            <div className="flex gap-x-1">
+            <div className="flex flex-col md:flex-row items-center gap-x-1">
               {
                 data &&
                 data.map((item, index) => (
                 <div className="m-5" key={index}>
-                  <div className="w-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
+                  <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
                       <a 
                       onClick={() => navigate(`/produk/${item?.id}`, {
                         state: {
@@ -142,6 +114,34 @@ function Index() {
         }
         </div>
         {/* Produk End */}
+
+        {/* TentangKami Start */}
+        <div className="mt-[20px] md:mt-4">
+          <div className="block md:flex md:items-center">
+            <div className="pl-0 md:pl-32">
+              <img src="../../public/about.jpg" alt="" className=""/>
+            </div>
+            <div className="p-5 h-full">
+              <h1 className="text-3xl font-bold pb-8 text-center md:text-left">Tentang Kami</h1>
+              <div className='flex justify-center md:block'>
+                <p className="text-[#1E2022] flex items-center mb-1 font-semibold">
+                  <FaceSmileIcon width={20} height={20} />
+                  Layanan terbaik bagi konsumen
+                </p>
+              </div>
+              <div className='flex justify-center md:block'>
+                <p className="text-[#1E2022] flex items-center mb-1  font-semibold">
+                  <ShoppingCartIcon width={20} height={20} />
+                  Hanya menjual produk original
+                </p>
+              </div>
+              <p className="mt-4 text-[#1E2022] font-medium text-sm text-center md:text-left">
+              Toko Vape Mas Liquid hanya menjual produk original dari brand-brand terkemuka. Produk dijamin original bergaransi.
+              </p>
+            </div>
+          </div>
+        </div>
+        {/* TentangKami End */}
 
         {/* Footer Start */}
         <Footer/>

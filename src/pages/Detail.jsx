@@ -18,7 +18,7 @@ function Detail() {
         <Navbar/>
 
         
-        <div className='ml-56'>
+        <div className='ml-8 md:ml-56'>
             <a
               onClick={() => {
                 navigate(-1)
@@ -31,8 +31,8 @@ function Detail() {
             </a>
         </div>
 
-        <div className='flex mt-5 pb-8'>
-          <div className='w-80 ml-56'>
+        <div className='md:flex mt-5 pb-8'>
+          <div className='w-80 md:ml-56 mx-auto md:mx-0'>
             <img className='rounded-md' src={gambar} alt="" />
           </div>
           <div className='p-5 pl-8'>

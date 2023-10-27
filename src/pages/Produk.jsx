@@ -117,22 +117,22 @@ function Produk() {
     <section>
         <Navbar/>
         <h1 className="text-3xl font-bold  text-center mt-7" >Produk Kami</h1>
-        <div className="flex items-center justify-center mt-5">
+        <div className="block md:flex items-center justify-center mt-5">
           <div>
-          <div className="flex rounded-md ">
-            <input 
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            placeholder="Search here..." type="text" className="py-2 px-3 pr-11 w-100 border-gray-200 outline outline-1 shadow-sm rounded-l-md text-sm focus:z-10 focus:outline-2 dark:bg-white dark:border-gray-700 dark:text-[#1E2022]"/>
-            <button 
-             onClick={handleSearch}
-            className="px-4 items-center min-w-fit rounded-r-md border border-l-0 border-gray-200 bg-gray-50 text-sm text-gray-500 dark:bg-[#1E2022] dark:border-gray-700 dark:text-white hover:bg-[#484d4e]">Search</button>
+            <div className="block md:flex rounded-md px-5 md:px-0">
+              <input 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search here..." type="text" className="py-2 px-3 mx-auto md:pr-11 text-center md:text-left rounded-md md:rounded-r-none w-full md:w-100 border-gray-200 outline outline-1 shadow-sm rounded-l-md text-sm focus:z-10 focus:outline-2 dark:bg-white dark:border-gray-700 dark:text-[#1E2022]"/>
+              <button 
+              onClick={handleSearch}
+              className="px-4 h-9 mb-4 md:mb-0 items-center mt-3 md:mt-0 w-full md:w-0 min-w-fit rounded-md md:rounded-l-none rounded-r-md border border-l-0 border-gray-200 bg-gray-50 text-sm text-gray-500 dark:bg-[#1E2022] dark:border-gray-700 dark:text-white hover:bg-[#484d4e]">Search</button>
+            </div>
           </div>
-          </div>
-        <div className="ml-10" ref={dropdownRef}>
+        <div className="flex justify-center md:block md:ml-10" ref={dropdownRef}>
             <button onClick={toggleDropdown} className="cursor-pointer text-[#1E2022] bg-white rounded-md p-1 px-4 outline outline-2 outline-[#1E2022] flex items-center">Kategori&nbsp;&nbsp;{showDropdown == false ? <ChevronDownIcon width={20} height={20} /> : <ChevronUpIcon width={20} height={20} />}</button>
               {showDropdown && (
-                  <ul className="absolute z-50 mt-2 rounded-md bg-white text-gray-800 hover:outline-none text-center">
+                  <ul className="absolute z-50 mt-10 md:mt-2 rounded-md bg-white text-gray-800 hover:outline-none text-center">
                       <li><a onClick={() => getLiquids("")}  className="cursor-pointer block text-sm px-5  py-2 hover:bg-[#1E2022] rounded-sm hover:outline-none hover:text-white">All category</a></li>
                       <li><a onClick={() => getLiquids("freebase")} className="cursor-pointer block text-sm px-5  py-2 hover:bg-[#1E2022] rounded-sm hover:outline-none hover:text-white">Freebase</a></li>
                       <li><a onClick={() => getLiquids("pods")} className="cursor-pointer block text-sm px-5 py-2 hover:bg-[#1E2022] rounded-sm hover:outline-none hover:text-white">Pods</a></li>
@@ -145,12 +145,12 @@ function Produk() {
           loading ? (
             <div className="h-72 flex items-center justify-center font-medium text-2xl">Loading....</div>
           ) : (
-            <div className='grid grid-cols-5 mt-2'>
+            <div className='flex flex-col md:grid md:grid-cols-5 mt-2'>
               {
                 data && 
                 data.map((item, index) => (
                   <section className="mx-auto my-5" key={index}>
-                      <div className="w-40 h-100 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
+                      <div className="w-60 md:w-40 h-100 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
                           <a 
                             onClick={() => navigate(`/produk/${item?.id}`, {
                               state: {
@@ -185,7 +185,7 @@ function Produk() {
                                 <div className="flex justify-center">
                                 <a 
                                 onClick={() => handleAddToCart(item)}
-                                className="cursor-pointer inline-flex items-center px-3 py-1 mb-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                className="cursor-pointer inline-flex items-center px-8 md:px-3 py-1 mb-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     add 
                                     <PlusCircleIcon width={20} height={20} />
                                 </a>
