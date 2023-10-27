@@ -2,30 +2,37 @@
 import React, { useState } from 'react';
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
+import Hero1 from '../assets/hero-1.jpg'
+import Hero2 from '../assets/hero-2.jpg'
+import Hero3 from '../assets/hero-3.jpg'
+import Hero4 from '../assets/hero-4.jpg'
+import Hero5 from '../assets/hero-5.jpg'
+import Hero6 from '../assets/hero-6.jpg'
+import Hero7 from '../assets/hero-7.jpg'
 
 function Slider() {
 
     const slides = [
         {
-            url: '../../src/assets/hero-1.jpg',
+            url: Hero1,
         },
         {
-            url: '../../src/assets/hero-2.jpg',
+            url: Hero2,
         },
         {
-            url: '../../src/assets/hero-3.jpg',
+            url: Hero3,
         },
         {
-            url: '../../src/assets/hero-4.jpg',
+            url: Hero4,
         },
         {
-            url: '../../src/assets/hero-5.jpg',
+            url: Hero5,
         },
         {
-            url: '../../src/assets/hero-6.jpg',
+            url: Hero6,
         },
         {
-            url: '../../src/assets/hero-7.jpg',
+            url: Hero7,
         },
     ];
     

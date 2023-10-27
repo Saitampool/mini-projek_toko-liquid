@@ -7,6 +7,7 @@ import Swal from "sweetalert2"
 import Navbar from '../components/Navbar'
 import Slider from "../components/Slider";
 import Footer from "../components/Footer";
+import ImgAbout from '../../src/assets/about.jpg'
 
 function Index() {
   const navigate = useNavigate();
@@ -119,7 +120,7 @@ function Index() {
         <div className="mt-[20px] md:mt-4">
           <div className="block md:flex md:items-center">
             <div className="pl-0 md:pl-32">
-              <img src="../../src/assets/about.jpg" alt="" className=""/>
+              <img src={ImgAbout} alt="" className=""/>
             </div>
             <div className="p-5 h-full">
               <h1 className="text-3xl font-bold pb-8 text-center md:text-left">Tentang Kami</h1>
