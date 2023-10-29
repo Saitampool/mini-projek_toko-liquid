@@ -122,17 +122,17 @@ function Admin() {
                             <input 
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search here..." type="text" className="py-2 px-3 pr-11 w-100 border-gray-200 outline outline-1 shadow-sm rounded-l-md text-sm focus:z-10 focus:outline-2 bg-white border-gray-700 text-[#1E2022]"/>
+                            placeholder="Search here..." type="text" className="py-2 px-3 pr-11 w-100 border-gray-200 outline outline-1 shadow-sm rounded-md sm:rounded-r-none text-sm focus:z-10 focus:outline-2 bg-white border-gray-700 text-[#1E2022]"/>
                             <button 
                             onClick={handleSearch}
-                            className="px-4 min-w-fit h-9 rounded-r-md border border-l-0 border-gray-200 text-sm text-gray-500 bg-[#1E2022] border-gray-700 text-white hover:bg-[#484d4e]">Search</button>
+                            className="px-4 min-w-fit h-9 mt-2 sm:mt-0 rounded-md sm:rounded-l-none border border-l-0 border-gray-200 text-sm text-gray-500 bg-[#1E2022] border-gray-700 text-white hover:bg-[#484d4e]">Search</button>
                         </div>
                         </div>
                 </div>
                 <div className='mt-6'>
                     <div className="relative overflow-x-auto rounded-sm">
                         <table className="w-full text-sm text-left text-gray-500 text-gray-400">
-                            <thead className="text-xs text-white uppercase bg-gray-50 bg-gray-700 text-white">
+                            <thead className="text-xs text-white uppercase bg-gray-700 text-white">
                                 <tr>
                                     <th scope="col" className="px-6 py-3 text-center">
                                         No
@@ -155,7 +155,7 @@ function Admin() {
                                 {
                                     data &&
                                     data.map((item, index) => (
-                                        <tr key={index} className="bg-white border-b bg-gray-800 border-gray-700 hover:bg-gray-900 cursor-pointer hover:text-white">
+                                        <tr key={index} className="border-b bg-gray-800 border-gray-700 hover:bg-gray-900 cursor-pointer hover:text-white">
                                             <th
                                             onClick={() => navigate(`/admin/detail/${item?.id}`, {
                                                 state: {
