@@ -63,7 +63,7 @@ function Cart() {
             liquid &&
             liquid.map((item, index) => (
               <div className="m-5" key={index}>
-              <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-102 hover:shadow-md">
+              <div className="w-60 md:w-40 border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-102 hover:shadow-md">
                   <a className="cursor-pointer flex justify-center">
                       <img className="rounded-t-lg object-fill" src={item.gambar} alt="" />
                   </a>

@@ -76,7 +76,7 @@ function Index() {
                 data &&
                 data.map((item, index) => (
                 <div className="m-5 mx-auto" key={index}>
-                  <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
+                  <div className="w-60 md:w-40 border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
                       <a 
                       onClick={() => navigate(`/produk/${item?.id}`, {
                         state: {

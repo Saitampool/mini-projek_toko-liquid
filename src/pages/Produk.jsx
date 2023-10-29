@@ -150,7 +150,7 @@ function Produk() {
                 data && 
                 data.map((item, index) => (
                   <section className="mx-auto my-5" key={index}>
-                      <div className="w-60 md:w-40 h-100 bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
+                      <div className="w-60 md:w-40 h-100 border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
                           <a 
                             onClick={() => navigate(`/produk/${item?.id}`, {
                               state: {
