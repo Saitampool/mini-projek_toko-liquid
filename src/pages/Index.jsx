@@ -46,13 +46,14 @@ function Index() {
         <div className="md:h-screen" id="home">
           <div className="text-center pt-7">
             <h1 className="text-3xl font-bold" >Mas Liquid</h1>
-            <p className="mt-1 text-lg	 font-medium">Toko Vape Mas Liquid hanya menjual produk original dari brand-brand terkemuka. <br/> Produk dijamin original bergaransi.</p>
+            <p className="mt-1 text-lg font-medium">Toko Vape Mas Liquid hanya menjual produk original dari brand-brand terkemuka. <br/> Produk dijamin original bergaransi.</p>
           </div>
           <div className="flex justify-center mt-3">
             <a
-                  type="submit"
-                  href="#produk"
-                  className="w-[120px] h-10 bg-[#1E2022] text-white border-none focus:outline-none hover:bg-[#484d4e] rounded-sm flex items-center justify-center"
+                  onClick={() => {
+                    navigate('/produk')
+                  }}
+                  className="w-[120px] cursor-pointer h-10 bg-[#1E2022] text-white border-none focus:outline-none hover:bg-[#484d4e] rounded-sm flex items-center justify-center"
                   >
                   Buy now
             </a>
@@ -75,7 +76,7 @@ function Index() {
                 data &&
                 data.map((item, index) => (
                 <div className="m-5 mx-auto" key={index}>
-                  <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
+                  <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
                       <a 
                       onClick={() => navigate(`/produk/${item?.id}`, {
                         state: {
@@ -103,7 +104,7 @@ function Index() {
                               }
                             })}
                           >
-                              <h5 className="mb-2 pt-4 text-sm text-center  font-md tracking-tight text-gray-900 dark:text-white">{item.nama}</h5>
+                              <h5 className="mb-2 pt-4 text-sm text-center  font-md tracking-tight text-gray-900 text-white">{item.nama}</h5>
                           </a>
                       </div>
                   </div>

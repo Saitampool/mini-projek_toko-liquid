@@ -59,7 +59,7 @@ function Tambah() {
         <section>
             <Sidebar/>
 
-            <div className="p-1 sm:ml-64 bg-white h-screen">
+            <div className="p-1 sm:ml-64 bg-slate-200 h-screen">
                 <div className="p-4 border-2 border-gray-200 border-solid rounded-sm dark:border-gray-700 h-[567px]">
                 <h1 className='text-2xl text-[#1E2022]'>Tambah produk</h1>
                 <a

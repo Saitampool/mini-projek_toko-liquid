@@ -103,10 +103,10 @@ function Admin() {
         {/* Sidebar End */}
 
 
-        <div className="p-1 sm:ml-64 bg-white h-screen">
-            <div className="p-4 border-2 border-gray-200 border-solid rounded-sm dark:border-gray-700">
+        <div className="p-1 sm:ml-64 bg-slate-200 h-screen">
+            <div className="p-4 border-2 border-gray-200 border-solid rounded-sm border-gray-700">
                 <h1 className='text-2xl text-[#1E2022]'>Daftar produk</h1>
-                <div className='flex'>
+                <div className='md:flex'>
                     <a
                         onClick={() => {
                             navigate('tambah')
@@ -117,22 +117,22 @@ function Admin() {
                         </svg>
                         <span className="flex-1 ml-1 whitespace-nowrap">Tambah Produk</span>
                     </a>
-                    <div className='mt-4 ml-5'>
-                        <div className="flex rounded-md ">
+                    <div className='mt-4 md:ml-5'>
+                        <div className="block md:flex rounded-md">
                             <input 
                             value={searchQuery}
                             onChange={(e) => setSearchQuery(e.target.value)}
-                            placeholder="Search here..." type="text" className="py-2 px-3 pr-11 w-100 border-gray-200 outline outline-1 shadow-sm rounded-l-md text-sm focus:z-10 focus:outline-2 dark:bg-white dark:border-gray-700 dark:text-[#1E2022]"/>
+                            placeholder="Search here..." type="text" className="py-2 px-3 pr-11 w-100 border-gray-200 outline outline-1 shadow-sm rounded-l-md text-sm focus:z-10 focus:outline-2 bg-white border-gray-700 text-[#1E2022]"/>
                             <button 
                             onClick={handleSearch}
-                            className="px-4 items-center min-w-fit rounded-r-md border border-l-0 border-gray-200 bg-gray-50 text-sm text-gray-500 dark:bg-[#1E2022] dark:border-gray-700 dark:text-white hover:bg-[#484d4e]">Search</button>
+                            className="px-4 min-w-fit h-9 rounded-r-md border border-l-0 border-gray-200 text-sm text-gray-500 bg-[#1E2022] border-gray-700 text-white hover:bg-[#484d4e]">Search</button>
                         </div>
                         </div>
                 </div>
                 <div className='mt-6'>
                     <div className="relative overflow-x-auto rounded-sm">
-                        <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <thead className="text-xs text-white uppercase bg-gray-50 dark:bg-gray-700 dark:text-white">
+                        <table className="w-full text-sm text-left text-gray-500 text-gray-400">
+                            <thead className="text-xs text-white uppercase bg-gray-50 bg-gray-700 text-white">
                                 <tr>
                                     <th scope="col" className="px-6 py-3 text-center">
                                         No
@@ -155,7 +155,7 @@ function Admin() {
                                 {
                                     data &&
                                     data.map((item, index) => (
-                                        <tr key={index} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-900 cursor-pointer hover:text-white">
+                                        <tr key={index} className="bg-white border-b bg-gray-800 border-gray-700 hover:bg-gray-900 cursor-pointer hover:text-white">
                                             <th
                                             onClick={() => navigate(`/admin/detail/${item?.id}`, {
                                                 state: {
@@ -167,7 +167,7 @@ function Admin() {
                                                     deskripsi: item.deskripsi
                                                 }
                                             })}
-                                            scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center">
+                                            scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap text-white text-center">
                                                 {index+1}
                                             </th>
                                             <td 

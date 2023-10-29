@@ -63,20 +63,20 @@ function Cart() {
             liquid &&
             liquid.map((item, index) => (
               <div className="m-5" key={index}>
-              <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-102 hover:shadow-md">
+              <div className="w-60 md:w-40 bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-102 hover:shadow-md">
                   <a className="cursor-pointer flex justify-center">
                       <img className="rounded-t-lg object-fill" src={item.gambar} alt="" />
                   </a>
                   <div className="p-1 cursor-pointer h-[185px] flex flex-col justify-between">
                       <a className=''>
-                          <h5 className="mb-2 text-sm text-center  font-md tracking-tight text-gray-900 dark:text-white">{item?.nama}</h5>
+                          <h5 className="mb-2 text-sm text-center  font-md tracking-tight text-gray-900 text-white">{item?.nama}</h5>
                       </a>
                       <div>
-                      <h5 className="mb-2 mt-3 text-xs text-center tracking-tight text-gray-900 dark:text-white">{formatRupiah(item?.harga)}</h5>
+                      <h5 className="mb-2 mt-3 text-xs text-center tracking-tight text-gray-900 text-white">{formatRupiah(item?.harga)}</h5>
                         {item.kuantitas > 0 && (
                           <div className='text-white flex justify-evenly'>
                             <button
-                              className='rounded-sm px-1 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-500 dark:hover:bg-yellow-700'
+                              className='rounded-sm px-1 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 bg-yellow-500 hover:bg-yellow-700'
                              onClick={() => handleReduceQuantity(item.id)}>
                               <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
                                 <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/>
@@ -85,7 +85,7 @@ function Cart() {
                             <span>{item.kuantitas}</span>
                             <button 
                               onClick={() => handleAddQuantity(item.id)}
-                              className='rounded-sm px-1 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 dark:bg-yellow-500 dark:hover:bg-yellow-700'
+                              className='rounded-sm px-1 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 bg-yellow-500 hover:bg-yellow-700'
                             >
                               <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
                                 <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32V224H48c-17.7 0-32 14.3-32 32s14.3 32 32 32H192V432c0 17.7 14.3 32 32 32s32-14.3 32-32V288H400c17.7 0 32-14.3 32-32s-14.3-32-32-32H256V80z"/>
@@ -97,7 +97,7 @@ function Cart() {
                       <div className="flex justify-center items-center mt-3">
                         <a 
                           onClick={() => handleDelete(item)}
-                          className="inline-flex items-center px-3 py-1 mb-2 text-sm font-medium text-center text-white rounded-sm hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-500 dark:hover:bg-blue-700">
+                          className="inline-flex items-center px-3 py-1 mb-2 text-sm font-medium text-center text-white rounded-sm hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 bg-blue-500 hover:bg-blue-700">
                             Hapus
                             <TrashIcon width={18} height={18} />
                         </a>

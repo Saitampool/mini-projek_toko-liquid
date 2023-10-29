@@ -8,12 +8,20 @@ function DetailAdmin() {
   const location = useLocation();
   const {state} = location
   const { id, nama, gambar, harga, deskripsi, kategori } = state;
+  function formatRupiah(harga) {
+    return new Intl.NumberFormat("id-ID", {
+      style: "currency",
+      currency: "IDR",
+      minimumFractionDigits: 0,
+    }).format(harga).replace(/\s/g, '.');
+  }
+
   return (
     <>
       <section>
           <Sidebar/>
 
-          <div className="p-1 sm:ml-64 bg-white h-screen">
+          <div className="p-1 sm:ml-64 bg-slate-200 h-screen">
             <div className="p-4 border-2 border-gray-200 border-solid rounded-sm dark:border-gray-700 h-[567px]">
             <h1 className='text-2xl text-[#1E2022]'>Detail produk</h1>
             <a
@@ -32,7 +40,7 @@ function DetailAdmin() {
           </div>
           <div className='p-5 pl-8'>
             <h1 className='text-2xl font-semibold'>{nama}</h1>
-            <p className='mt-7'><span className='font-medium'>Harga</span> : {harga}</p>
+            <p className='mt-7'><span className='font-medium'>Harga</span> : {formatRupiah(harga)}</p>
             <p className='mt-2'><span className='font-medium'>Kategori</span> : {kategori}</p>
             <p className='mt-2'><span className='font-medium'>Deskripsi</span> : {deskripsi}</p>
           </div>

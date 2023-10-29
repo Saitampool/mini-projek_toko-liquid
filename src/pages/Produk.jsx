@@ -123,10 +123,10 @@ function Produk() {
               <input 
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search here..." type="text" className="py-2 px-3 mx-auto md:pr-11 text-center md:text-left rounded-md md:rounded-r-none w-full md:w-100 border-gray-200 outline outline-1 shadow-sm rounded-l-md text-sm focus:z-10 focus:outline-2 dark:bg-white dark:border-gray-700 dark:text-[#1E2022]"/>
+              placeholder="Search here..." type="text" className="py-2 px-3 mx-auto md:pr-11 text-center md:text-left rounded-md md:rounded-r-none w-full md:w-100 border-gray-200 outline outline-1 shadow-sm rounded-l-md text-sm focus:z-10 focus:outline-2 bg-white border-gray-700 text-[#1E2022]"/>
               <button 
               onClick={handleSearch}
-              className="px-4 h-9 mb-4 md:mb-0 items-center mt-3 md:mt-0 w-full md:w-0 min-w-fit rounded-md md:rounded-l-none rounded-r-md border border-l-0 border-gray-200 bg-gray-50 text-sm text-gray-500 dark:bg-[#1E2022] dark:border-gray-700 dark:text-white hover:bg-[#484d4e]">Search</button>
+              className="px-4 h-9 mb-4 md:mb-0 items-center mt-3 md:mt-0 w-full md:w-0 min-w-fit rounded-md md:rounded-l-none rounded-r-md border border-l-0 border-gray-200 text-sm text-gray-500 bg-[#1E2022] border-gray-700 text-white hover:bg-[#484d4e]">Search</button>
             </div>
           </div>
         <div className="flex justify-center md:block md:ml-10" ref={dropdownRef}>
@@ -150,7 +150,7 @@ function Produk() {
                 data && 
                 data.map((item, index) => (
                   <section className="mx-auto my-5" key={index}>
-                      <div className="w-60 md:w-40 h-100 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
+                      <div className="w-60 md:w-40 h-100 bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 z-0 transform transition-transform hover:scale-105 hover:shadow-md">
                           <a 
                             onClick={() => navigate(`/produk/${item?.id}`, {
                               state: {
@@ -178,14 +178,14 @@ function Produk() {
                                   }
                                 })}
                               >
-                                <h5 className="mb-2 text-sm text-center font-medium tracking-tight text-gray-900 dark:text-white">{item?.nama}</h5>
+                                <h5 className="mb-2 text-sm text-center font-medium tracking-tight text-gray-900 text-white">{item?.nama}</h5>
                               </a>
                               <div>
-                                <h5 className="mb-2 mt-3 text-xs text-center tracking-tight text-gray-900 dark:text-white">{formatRupiah(item?.harga)}</h5>
+                                <h5 className="mb-2 mt-3 text-xs text-center tracking-tight text-gray-900 text-white">{formatRupiah(item?.harga)}</h5>
                                 <div className="flex justify-center">
                                 <a 
                                 onClick={() => handleAddToCart(item)}
-                                className="cursor-pointer inline-flex items-center px-8 md:px-3 py-1 mb-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                className="cursor-pointer inline-flex items-center px-8 md:px-3 py-1 mb-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
                                     add 
                                     <PlusCircleIcon width={20} height={20} />
                                 </a>

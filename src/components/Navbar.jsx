@@ -84,7 +84,7 @@ function Navbar() {
                 </a>
               )
             }
-            <button onClick={()=>setIsOpen(!isOpen)} data-collapse-toggle="navbar-default" type="button" className="inline-flex ml-2 items-center p-1 w-10 h-10 justify-center text-sm hover:text-blue-500 text-gray-500 rounded-lg md:hidden dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false">
+            <button onClick={()=>setIsOpen(!isOpen)} data-collapse-toggle="navbar-default" type="button" className="inline-flex ml-2 items-center p-1 w-10 h-10 justify-center text-sm hover:text-blue-500 text-gray-200 rounded-lg md:hidden dark:text-gray-400" aria-controls="navbar-default" aria-expanded="false">
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (
                   <svg
