@@ -21,7 +21,7 @@ function Support() {
         model: "text-davinci-003",
         prompt: prompt,
         temperature: 0.5,
-        max_tokens: 100,
+        max_tokens: 1000,
       })
       .then((response) => {
         setResult(response.data.choices[0].text);
@@ -56,7 +56,7 @@ function Support() {
             value={result} 
             placeholder={loading ? "Please wait, your prompt is in progress" : ""}
             onChange={(e) => setResult(e.target.value)} cols="30" rows="10" 
-            className='py-1 px-3 resize-none pr-11 w-[300px] md:w-[420px] border-gray-200 outline outline-1 shadow-sm rounded-md text-sm focus:z-10 focus:outline-2 dark:bg-white dark:border-gray-700 dark:text-[#1E2022]'
+            className='py-1 px-3 pr-11 w-[300px] md:w-[420px] border-gray-200 outline outline-1 shadow-sm rounded-md text-sm focus:z-10 focus:outline-2 dark:bg-white dark:border-gray-700 dark:text-[#1E2022]'
             />
           </div>
         </div>
