@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   removeItem,
@@ -72,17 +72,6 @@ function Cart() {
       <div>
         <h1 className=" text-3xl font-bold mt-8 text-center mb-5 md:mb-0">
           Keranjangmu
-        </h1>
-        <h1 className=" text-md font-medium pl-5">
-          Total barang :{" "}
-          {cart.items
-            ? cart.items.length - 1 == -1
-              ? 0
-              : cart.items.length - 1
-            : 0}
-        </h1>
-        <h1 className=" text-md font-medium pl-5">
-          Total harga : {formatRupiah(totalHarga)}
         </h1>
 
         {liquid.length == 0 ? (
@@ -159,9 +148,28 @@ function Cart() {
           </div>
         )}
         {liquid.length > 0 ? (
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-evenly">
+            <div>
+              <h1 className=" text-md font-medium pl-5">
+                Total barang :{" "}
+                {cart.items
+                  ? cart.items.length - 1 == -1
+                    ? 0
+                    : cart.items.length - 1
+                  : 0}
+              </h1>
+              <h1 className=" text-md font-medium pl-5">
+                Total harga : {formatRupiah(totalHarga)}
+              </h1>
+            </div>
             <button
-              onClick={handleBuy}
+              onClick={() =>
+                navigate("/payment", {
+                  state: {
+                    Total: totalHarga,
+                  },
+                })
+              }
               className="bg-red-600 text-white py-3 px-10 hover:bg-red-500 rounded-full"
             >
               Beli
