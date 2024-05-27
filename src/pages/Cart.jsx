@@ -164,7 +164,7 @@ function Cart() {
             </div>
             <button
               onClick={() =>
-                navigate("/payment", {
+                navigate("/bayar", {
                   state: {
                     Total: totalHarga,
                   },

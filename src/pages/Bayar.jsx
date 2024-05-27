@@ -6,7 +6,7 @@ import Imgalfa from "../../src/assets/ALFAMART.png";
 import Imgshope from "../../src/assets/shope.png";
 import Imgbank from "../../src/assets/bank.jpg";
 
-function Payment() {
+const Bayar = () => {
   const [selectedPayment, setSelectedPayment] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [pin, setPin] = useState("");
@@ -438,6 +438,6 @@ function Payment() {
       </div>
     </div>
   );
-}
+};
 
-export default Payment;
+export default Bayar;
