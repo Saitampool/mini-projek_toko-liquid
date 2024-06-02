@@ -15,6 +15,7 @@ import Tambah from "../pages/Tambah";
 import Register from "../pages/Register";
 // import Payment from "../pages/payment";
 import Bayar from "../pages/Bayar";
+import Error from "../pages/Error";
 
 const App = () => {
   return (
@@ -35,6 +36,7 @@ const App = () => {
           <Route element={<DetailAdmin />} path="/admin/detail/:id" />
           <Route element={<Tambah />} path="/admin/tambah" />
           <Route element={<Update />} path="/admin/update/:id" />
+          <Route element={<Error />} path="*" />
         </Routes>
       </BrowserRouter>
     </AuthProvider>

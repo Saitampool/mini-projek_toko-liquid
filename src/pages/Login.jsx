@@ -97,7 +97,10 @@ function Login() {
     <div>
       {userLoggedIn && <Navigate to={"/"} replace={true} />}
       <section className="flex justify-center items-center w-screen h-screen bg-[#F0F5F9]">
-        <form onSubmit={onSubmit} className="flex flex-col gap-y-3">
+        <form
+          onSubmit={onSubmit}
+          className="flex flex-col gap-y-3 w-full max-w-md p-4 sm:p-6 lg:p-8 bg-white rounded-lg shadow-md"
+        >
           <h1 className="text-center text-3xl font-bold">Sign In</h1>
           <label className="text-sm">Email</label>
           <input
@@ -114,14 +117,14 @@ function Login() {
               onClick={handleShowPassword}
               className="absolute right-0 mr-3 mt-8 text-gray-700"
             >
-              {showPassword == false ? (
+              {showPassword === false ? (
                 <VisibilityOffIcon fontSize="medium" />
               ) : (
                 <VisibilityIcon />
               )}
             </button>
             <input
-              type={`${showPassword == false ? `password` : `text`}`}
+              type={showPassword === false ? "password" : "text"}
               placeholder="password..."
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -135,12 +138,6 @@ function Login() {
             </span>
           )}
           <div className="h-10 mt-5">
-            {/* <button
-              type="submit"
-              className="w-full h-full bg-[#1E2022] text-white border-none focus:outline-none rounded-sm flex items-center justify-center"
-            >
-              Login
-            </button> */}
             <button
               type="submit"
               disabled={isSigningIn}
@@ -154,9 +151,9 @@ function Login() {
             </button>
           </div>
           <p className="text-center">
-            Don&#39;t have an account?
+            Don't have an account?
             <span
-              className="cursor-pointer hover:text-[#C9D6DF] text-[#52616B]"
+              className="cursor-pointer hover:text-[#C9D6DF] text-[#52616B] ml-1"
               onClick={() => {
                 navigate("/auth/register");
               }}
@@ -174,7 +171,7 @@ function Login() {
             onClick={(e) => {
               onGoogleSignIn(e);
             }}
-            className={`w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium  ${
+            className={`w-full flex items-center justify-center gap-x-3 py-2.5 border rounded-lg text-sm font-medium ${
               isSigningIn
                 ? "cursor-not-allowed"
                 : "hover:bg-gray-100 transition duration-300 active:bg-gray-100"

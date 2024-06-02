@@ -12,13 +12,14 @@ import { useNavigate } from "react-router-dom";
 import { TrashIcon } from "@heroicons/react/24/outline";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { useAuth } from "../contexts/authContext/Index";
 
 function Cart() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
   const liquid = cart.items.slice(1);
-  console.log("cart : ", liquid);
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
 
   const handleDelete = (item) => {
     dispatch(removeItem(item.id));
@@ -98,7 +99,7 @@ function Cart() {
                         </h5>
                       </a>
                       <div>
-                        <h5 className="mb-2 mt-3 text-xs text-center tracking-tight text-gray-900 text-white">
+                        <h5 className="mb-1 mt-2 text-xs text-center tracking-tight text-gray-900 text-white">
                           {formatRupiah(item?.harga)}
                         </h5>
                         {item.kuantitas > 0 && (
@@ -115,10 +116,15 @@ function Cart() {
                                 <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z" />
                               </svg>
                             </button>
-                            <span>{item.kuantitas}</span>
+                            <span>x {item.kuantitas}</span>
                             <button
                               onClick={() => handleAddQuantity(item.id)}
-                              className="rounded-sm px-1 hover:bg-yellow-800 focus:outline-none focus:ring-yellow-300 bg-yellow-500 hover:bg-yellow-700"
+                              className={`rounded-sm px-1 focus:outline-none focus:ring-yellow-300 bg-yellow-500 hover:bg-yellow-700 ${
+                                item.kuantitas === item.stok
+                                  ? "opacity-50 cursor-not-allowed"
+                                  : "hover:bg-yellow-800"
+                              }`}
+                              disabled={item.kuantitas === item.stok}
                             >
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -130,6 +136,9 @@ function Cart() {
                             </button>
                           </div>
                         )}
+                        <div className="mt-2 text-xs text-center tracking-tight text-gray-900 text-white">
+                          {formatRupiah(item?.kuantitas * item?.harga)}
+                        </div>
 
                         <div className="flex justify-center items-center mt-3">
                           <a
@@ -167,6 +176,8 @@ function Cart() {
                 navigate("/bayar", {
                   state: {
                     Total: totalHarga,
+                    Item: liquid,
+                    Email: currentUser?.email,
                   },
                 })
               }

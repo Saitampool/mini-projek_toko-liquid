@@ -12,6 +12,7 @@ import {
   ChevronUpIcon,
   PlusCircleIcon,
 } from "@heroicons/react/24/outline";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
@@ -86,6 +87,7 @@ function Produk() {
         kategori: item?.kategori,
         deskripsi: item?.deskripsi,
         harga: item?.harga,
+        stok: item?.stok,
       };
       dispatch(addItem(newItem));
       Swal.fire({
@@ -219,6 +221,7 @@ function Produk() {
                           gambar: item.gambar,
                           harga: item.harga,
                           deskripsi: item.deskripsi,
+                          stok: item.stok,
                         },
                       })
                     }
@@ -241,6 +244,7 @@ function Produk() {
                             kategori: item.kategori,
                             harga: item.harga,
                             deskripsi: item.deskripsi,
+                            stok: item.stok,
                           },
                         })
                       }
@@ -253,6 +257,9 @@ function Produk() {
                       <h5 className="mb-2 mt-3 text-xs text-center tracking-tight text-gray-900 text-white">
                         {formatRupiah(item?.harga)}
                       </h5>
+                      {/* <h5 className="mb-2 mt-3 text-xs text-center tracking-tight text-gray-900 text-white">
+                        Stok {item?.stok}
+                      </h5> */}
                       <div className="flex justify-center">
                         <a
                           onClick={() => handleAddToCart(item)}

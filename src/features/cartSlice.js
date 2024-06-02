@@ -9,7 +9,8 @@ const initialState = {
       kategori: "",
       deskirpsi: "",
       harga: 0,
-      kuantitas: 1
+      kuantitas: 1,
+      stok: ""
     },
   ],
 };

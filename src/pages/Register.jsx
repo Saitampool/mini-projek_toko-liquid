@@ -55,16 +55,14 @@ function Register() {
   };
 
   return (
-    <>
+    <div>
       {userLoggedIn && <Navigate to={"/"} replace={true} />}
       <section className="flex justify-center items-center w-screen h-screen bg-[#F0F5F9]">
-        <form className="flex flex-col gap-y-3 " onSubmit={onSubmit}>
+        <form
+          className="flex flex-col gap-y-3 w-full max-w-md p-4 sm:p-6 lg:p-8 bg-white rounded-lg shadow-md"
+          onSubmit={onSubmit}
+        >
           <h1 className="text-center text-3xl font-bold">Create an account</h1>
-          {/* <label className='text-sm mt-2'>Full Name</label>
-            <input
-                placeholder='Type your name here...'
-            className="p-3 w-full h-10 rounded-md bg-white border border-[#1E2022] focus:outline-none "
-            /> */}
           <label className="text-sm">Email</label>
           <input
             type="email"
@@ -79,17 +77,18 @@ function Register() {
           <div className="relative">
             <label className="text-sm">Password</label>
             <button
+              type="button"
               onClick={handleShowPassword}
               className="absolute right-0 mr-3 mt-8 text-gray-700"
             >
-              {showPassword == false ? (
+              {showPassword === false ? (
                 <VisibilityOffIcon fontSize="medium" />
               ) : (
                 <VisibilityIcon />
               )}
             </button>
             <input
-              type={`${showPassword == false ? `password` : `text`}`}
+              type={showPassword === false ? "password" : "text"}
               placeholder="Type your password here..."
               disabled={isRegistering}
               required
@@ -103,17 +102,18 @@ function Register() {
           <div className="relative">
             <label className="text-sm">Confirm Password</label>
             <button
+              type="button"
               onClick={handleShowPassword1}
               className="absolute right-0 mr-3 mt-8 text-gray-700"
             >
-              {showPassword1 == false ? (
+              {showPassword1 === false ? (
                 <VisibilityOffIcon fontSize="medium" />
               ) : (
                 <VisibilityIcon />
               )}
             </button>
             <input
-              type={`${showPassword1 == false ? `password` : `text`}`}
+              type={showPassword1 === false ? "password" : "text"}
               placeholder="Confirm your password here..."
               disabled={isRegistering}
               required
@@ -145,7 +145,7 @@ function Register() {
           <p className="text-center">
             Already have an account?
             <span
-              className="cursor-pointer hover:text-[#C9D6DF] text-[#52616B]"
+              className="cursor-pointer hover:text-[#C9D6DF] text-[#52616B] ml-1"
               onClick={() => {
                 navigate("/auth/login");
               }}
@@ -155,7 +155,7 @@ function Register() {
           </p>
         </form>
       </section>
-    </>
+    </div>
   );
 }
 

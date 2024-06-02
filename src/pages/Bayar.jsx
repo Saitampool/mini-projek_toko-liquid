@@ -16,7 +16,8 @@ const Bayar = () => {
   const { state } = location;
   const [ongkir, setOngkir] = useState(0);
 
-  const { Total } = state;
+  const { Total, Item, Email } = state;
+  console.info(Item, Email, Total);
   const TotalWithOngkir = Total + parseFloat(ongkir);
   const handleOngkirChange = (event) => {
     setOngkir(event.target.value);
